@@ -6,4 +6,7 @@ class ApplicationController < ActionController::Base
   def hello
   	render text: "hello, world!"
   end
+
+   # Returns the full title on a per-page basis.
+
 end
