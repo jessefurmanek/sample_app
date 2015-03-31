@@ -26,6 +26,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
                                password_confirmation: "password" }
     end
     assert_equal 1, ActionMailer::Base.deliveries.size
+    #assigns allows you to access instance variables in the user controller
     user = assigns(:user)
     assert_not user.activated?
     #Try to log in before activation
